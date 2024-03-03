@@ -1,9 +1,21 @@
-[build-system]
-# AVOID CHANGING REQUIRES: IT WILL BE UPDATED BY PYSCAFFOLD!
-requires = ["setuptools>=46.1.0", "setuptools_scm[toml]>=5"]
-build-backend = "setuptools.build_meta"
+[tool.poetry]
+name = "dashbody"
+version = "0.1.0"
+description = "Dashboard of biometric data"
+authors = ["effidotpy <effidotpy@gmail.com>"]
+license = "MIT"
+readme = "README.rst"
 
-[tool.setuptools_scm]
-# For smarter version schemes and other configuration options,
-# check out https://github.com/pypa/setuptools_scm
-version_scheme = "no-guess-dev"
+[tool.poetry.dependencies]
+python = "^3.9.5"
+pydantic = "^2.6.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^3.0"
+flake8 = "^7.0.0"
+mypy = "^1.8.0"
+black = "^24.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
